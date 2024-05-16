@@ -103,7 +103,7 @@
   font-size: var(--font-size--small);
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 768px) {
   .Input__container {
     height: 33.86px;
   }
