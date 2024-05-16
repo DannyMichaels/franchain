@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { Input, Button } from '@/components/shared';
 import * as Yup from 'yup';
 import { Formik, Form } from 'formik';
+import { countries } from '@/data/countries';
+import ReactCountryFlag from 'react-country-flag';
 
 export const SignupForm = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -80,25 +82,26 @@ export const SignupForm = () => {
               name="businessName"
               onBlur={() => handleFieldBlur('businessName')}
               error={touchedFields.businessName && errors.businessName}
-              SelectComponent={({ onBlur }) => (
-                <select
-                  name="businessLocation"
-                  style={{
-                    border: 'none',
-                    background: 'none',
-                    width: '100%',
-                    padding: '0',
-                    color: 'var(--color-text)',
-                    position: 'absolute',
-                    top: '0',
-                    width: '20%',
-                    right: '0',
-                  }}>
-                  <option value="US">United States</option>
-                  <option value="CA">Canada</option>
-                  <option value="MX">Mexico</option>
-                </select>
-              )}
+              selectProps={{
+                options: countries.map((c) => ({
+                  label: c.alpha2Code,
+                  value: c.alpha2Code,
+                  IconComponent: () => (
+                    <ReactCountryFlag
+                      countryCode={c.alpha2Code}
+                      style={{
+                        fontSize: '2em',
+                        lineHeight: '2em',
+                      }}
+                    />
+                  ),
+                })),
+
+                name: 'businessLocation',
+                error:
+                  touchedFields.businessLocation && errors.businessLocation,
+                onBlur: () => handleFieldBlur('businessLocation'),
+              }}
             />
 
             <Input

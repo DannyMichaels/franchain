@@ -4,16 +4,6 @@
   width: 100%;
 }
 
-/* .Input__container--with-select {
-  display: flex;
-  flex-direction: row;
-}
-
-.Input__container--with-select > .Input__field {
-  width: 80%;
-  border-left: 50px;
-} */
-
 .Input__label {
   font-size: var(--font-size--small);
 }
@@ -40,11 +30,13 @@
   padding: 10px;
   height: 100%;
   width: 100%;
+  border-radius: var(--border-radius--primary);
 }
 
 .Input__field--with-select {
   width: 80%;
   border-right: 1px solid var(--color-border--primary);
+  border-radius: var(--border-radius--primary) 0 0 var(--border-radius--primary);
 }
 
 .Input__field:focus {
@@ -70,16 +62,53 @@
   opacity: 1;
 }
 
+.Input__select__container {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 0;
+  width: 20%;
+  height: 100%;
+}
+
+.Input__select {
+  background: transparent;
+  border: none;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  background: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>")
+    no-repeat;
+  background-position: calc(100% - 0.75rem) center !important;
+  -moz-appearance: none !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  padding-right: 2rem !important;
+  font-size: 12px;
+  border-radius: 0 var(--border-radius--primary) var(--border-radius--primary) 0;
+}
+
+.Input__select:focus {
+  outline: none;
+  background: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z' transform='rotate(180 8 8)'/></svg>")
+    no-repeat;
+}
+
+.Input__select > option {
+  background: #fdfdff;
+  color: var(--color-text);
+  font-size: var(--font-size--small);
+}
+
 @media screen and (max-width: 1000px) {
   .Input__container {
     height: 67.2px;
   }
 
-  .Input__label {
-    font-size: var(--font-size--small-mobile);
-  }
-
-  .Input__error {
+  .Input__label,
+  .Input__error,
+  .Input__select > option {
     font-size: var(--font-size--small-mobile);
   }
 }

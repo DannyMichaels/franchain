@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { SignupView } from '@/views/SignupView';
-import { AuthLayout } from '../Layouts/AuthLayout';
+import { AuthLayout } from '@/Layouts/AuthLayout';
 
 const authPaths = {
   path: '',

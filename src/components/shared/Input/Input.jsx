@@ -7,12 +7,12 @@ export const Input = ({
   label = 'Label',
   error,
   name,
-  SelectComponent = null,
+  selectProps = null,
   ...rest
 }) => {
   const inputRef = useRef(null);
   const [focused, setFocused] = useState(false);
-  const hasSelectComponent = !!SelectComponent;
+  const hasSelectComponent = !!selectProps;
 
   return (
     <div className="Input__wrapper">
@@ -46,8 +46,23 @@ export const Input = ({
         </div>
 
         {hasSelectComponent && (
-          <div className="Input__select" style={{ zIndex: 2 }}>
-            <SelectComponent onBlur={() => setFocused(false)} />
+          <div className="Input__select__container">
+            <Field
+              as="select"
+              className="Input__select"
+              name={selectProps.name}>
+              {selectProps?.options?.map?.((option, index) => {
+                return (
+                  <option key={index} value={option.value}>
+                    {option.IconComponent
+                      ? { ...option.IconComponent() }
+                      : null}
+                    {option.IconComponent ? ' ' : ''}
+                    {option.label}
+                  </option>
+                );
+              })}
+            </Field>
           </div>
         )}
       </div>

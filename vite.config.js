@@ -12,6 +12,8 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src/'),
       components: `${path.resolve(__dirname, './src/components/')}`,
       views: `${path.resolve(__dirname, './src/views/')}`,
+      layouts: `${path.resolve(__dirname, './src/Layouts/')}`,
+      data: `${path.resolve(__dirname, './src/data/')}`,
     },
   },
 });
