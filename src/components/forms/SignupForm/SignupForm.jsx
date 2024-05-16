@@ -23,7 +23,16 @@ export const SignupForm = () => {
   const handleSubmit = (values, { setSubmitting }) => {
     setSubmitted(true);
     setTimeout(() => {
-      alert(JSON.stringify(values, null, 2));
+      alert(
+        JSON.stringify(
+          {
+            ...values,
+            password: values.password.replace(/./g, '*'),
+          },
+          null,
+          2
+        )
+      );
       setSubmitting(false);
     }, 400);
   };
