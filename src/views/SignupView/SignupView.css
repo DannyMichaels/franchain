@@ -26,6 +26,9 @@
   .SignupView__container {
     margin-left: 0;
     padding: 20px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .SignupView__title {
@@ -34,5 +37,11 @@
 
   .SignupView__subtitle {
     font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .SignupView__container {
+    width: 100%;
   }
 }
