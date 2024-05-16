@@ -29,8 +29,8 @@
   outline: none;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 768px) {
   .Button {
-    font-size: 23.4px;
+    font-size: var(--font-size--small-mobile);
   }
 }

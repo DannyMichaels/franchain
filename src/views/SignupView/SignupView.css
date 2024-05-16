@@ -31,18 +31,18 @@
     margin-left: auto;
     margin-right: auto;
   }
-
-  .SignupView__title {
-    font-size: 28.6px;
-  }
-
-  .SignupView__subtitle {
-    font-size: var(--font-size--small-mobile);
-  }
 }
 
 @media screen and (max-width: 768px) {
   .SignupView__container {
     width: 100%;
+  }
+
+  .SignupView__title {
+    font-size: 22px;
+  }
+
+  .SignupView__subtitle {
+    font-size: 16px;
   }
 }
