@@ -111,7 +111,13 @@
     flex-basis: 100%;
   }
 
-  .AuthLayout__header__logo {
+  /* .AuthLayout__header__logo {
     width: 36px;
+  } */
+}
+
+@media screen and (max-width: 768px) {
+  .AuthLayout__header__logo {
+    width: 17.5px;
   }
 }
