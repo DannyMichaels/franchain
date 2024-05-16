@@ -29,16 +29,12 @@ body {
   flex-direction: column;
 }
 
-.layout__children {
-  flex-grow: 1;
-}
-
 .inner-column {
-  display: block;
+  display: flex;
   width: 100%;
   max-width: 1300px;
   margin-right: auto;
   margin-left: auto;
-  padding: 10px;
-  border: 2px solid red;
+  /* padding: 10px; */
+  /* border: 2px solid red; */
 }
