@@ -33,11 +33,11 @@
   }
 
   .SignupView__title {
-    font-size: 22px;
+    font-size: 28.6px;
   }
 
   .SignupView__subtitle {
-    font-size: 16px;
+    font-size: var(--font-size--small-mobile);
   }
 }
 

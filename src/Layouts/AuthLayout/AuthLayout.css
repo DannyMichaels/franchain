@@ -81,7 +81,8 @@
 }
 
 .AuthLayout__left__image {
-  max-width: 428px;
+  /* max-width: 428px; */
+  max-width: 513.6px;
   width: 100%;
   margin-top: 150px;
   object-fit: contain;

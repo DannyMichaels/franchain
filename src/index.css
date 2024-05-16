@@ -12,6 +12,8 @@
   --color-error: #ff4e4e;
   --color-border--primary: #b1b7d6;
   --border-radius--primary: 8px;
+  --font-size--small: 16px;
+  --font-size--small-mobile: 20.8px;
 
   font-family: 'DM Sans', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

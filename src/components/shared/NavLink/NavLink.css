@@ -12,3 +12,9 @@
   color: var(--color-text);
   font-size: 16px;
 }
+
+@media screen and (max-width: 1000px) {
+  .NavLink {
+    font-size: 20.8px;
+  }
+}

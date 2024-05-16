@@ -4,7 +4,7 @@
 }
 
 .Input__label {
-  font-size: 16px;
+  font-size: var(--font-size--small);
 }
 
 .Input__field {
@@ -24,7 +24,7 @@
 
 .Input__error {
   color: var(--color-error);
-  font-size: 16px;
+  font-size: var(--font-size--small);
   margin-top: 8px;
   height: 20px;
   opacity: 1;
@@ -43,5 +43,13 @@
 @media screen and (max-width: 1000px) {
   .Input__field {
     height: 67.2px;
+  }
+
+  .Input__label {
+    font-size: var(--font-size--small-mobile);
+  }
+
+  .Input__error {
+    font-size: var(--font-size--small-mobile);
   }
 }
