@@ -5,6 +5,8 @@
   width: 100%;
 }
 
-.SignupForm__submit-spacer {
-  height: 20px;
+.SignupForm__submit {
+  /* margin-top: 20px; */
+  width: 144px;
+  height: 56px;
 }

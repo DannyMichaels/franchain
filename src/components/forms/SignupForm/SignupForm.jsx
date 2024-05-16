@@ -86,15 +86,16 @@ export const SignupForm = () => {
               onBlur={() => handleFieldBlur('password')}
             />
 
-            <div className="SignupForm__submit-spacer"></div>
-            <Button
-              type="submit"
-              disabled={
-                Object.keys(touchedFields).length < 1 ||
-                Object.keys(errors).length > 0
-              }
-              label={isSubmitting ? 'Submitting...' : 'Sign up'}
-            />
+            <div className="SignupForm__submit">
+              <Button
+                type="submit"
+                disabled={
+                  Object.keys(touchedFields).length < 1 ||
+                  Object.keys(errors).length > 0
+                }
+                label={isSubmitting ? 'Submitting...' : 'Sign up'}
+              />
+            </div>
           </Form>
         );
       }}
