@@ -20,3 +20,10 @@
 .SignupView__form {
   width: 100%;
 }
+
+@media screen and (max-width: 1000px) {
+  .SignupView__container {
+    margin-left: 0;
+    padding: 20px;
+  }
+}

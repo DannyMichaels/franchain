@@ -83,3 +83,22 @@
   /* border: 1px solid green; */
   flex-basis: 50%;
 }
+
+@media screen and (max-width: 900px) {
+  .AuthLayout__container {
+    flex-direction: column;
+  }
+
+  .AuthLayout__left {
+    /* flex-basis: 100%; */
+    display: none;
+  }
+
+  .AuthLayout__right {
+    flex-basis: 100%;
+  }
+
+  .AuthLayout__header-spacer {
+    height: 150px;
+  }
+}
