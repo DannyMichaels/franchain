@@ -28,7 +28,8 @@
 
 .AuthLayout__header__content {
   padding: 20px;
-  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
 }
 
 .AuthLayout__children {

@@ -1,9 +1,11 @@
 import './AuthLayout.css';
 import SignUpImage from '@/assets/images/sign-up-screen.svg';
 import Logo from '@/assets/images/logo.svg';
+import { NavLink } from '@/components/shared';
 
 export const AuthLayout = ({
   children,
+  page = 'signup',
   image = SignUpImage,
   title = (
     <>
@@ -19,7 +21,16 @@ export const AuthLayout = ({
       <div className="AuthLayout__content">
         <div className="AuthLayout__header">
           <div className="AuthLayout__header__content">
-            <img src={Logo} alt="Logo" className="AuthLayout__header__logo" />
+            <div className="AuthLayout__header__left">
+              <img src={Logo} alt="Logo" className="AuthLayout__header__logo" />
+            </div>
+
+            <div className="AuthLayout__header__right">
+              <NavLink
+                title={page === 'signup' ? 'Log in' : 'Sign up'}
+                to={page === 'signup' ? '/auth/login' : '/auth/signup'}
+              />
+            </div>
           </div>
         </div>
         <div className="AuthLayout__left">

@@ -7,21 +7,27 @@ const authPaths = {
   path: '',
   element: (
     <Suspense fallback={<div>loading...</div>}>
-      <AuthLayout>
-        <Outlet />
-      </AuthLayout>
+      <Outlet />
     </Suspense>
   ),
 
   children: [
     {
       path: 'login',
-      // element: <LoginPage />,
+      element: (
+        <AuthLayout page="login">
+          <h1>Login View (TODO)</h1>
+        </AuthLayout>
+      ),
     },
 
     {
       path: 'signup',
-      element: <SignupView />,
+      element: (
+        <AuthLayout page="signup">
+          <SignupView />
+        </AuthLayout>
+      ),
     },
   ],
 };

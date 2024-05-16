@@ -1,0 +1,14 @@
+.NavLink__container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 16px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.NavLink {
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 16px;
+}
