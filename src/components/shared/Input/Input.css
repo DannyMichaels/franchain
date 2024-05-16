@@ -30,6 +30,8 @@
   padding: 10px;
   height: 100%;
   width: 100%;
+  font-size: var(--font-size--small);
+  color: var(--color-text);
   border-radius: var(--border-radius--primary);
 }
 
@@ -108,7 +110,17 @@
 
   .Input__label,
   .Input__error,
+  .Input__select,
+  .Input__field,
   .Input__select > option {
     font-size: var(--font-size--small-mobile);
+  }
+
+  .Input__field--with-select {
+    width: 70%;
+  }
+
+  .Input__select__container {
+    width: 30%;
   }
 }
