@@ -80,6 +80,25 @@ export const SignupForm = () => {
               name="businessName"
               onBlur={() => handleFieldBlur('businessName')}
               error={touchedFields.businessName && errors.businessName}
+              SelectComponent={({ onBlur }) => (
+                <select
+                  name="businessLocation"
+                  style={{
+                    border: 'none',
+                    background: 'none',
+                    width: '100%',
+                    padding: '0',
+                    color: 'var(--color-text)',
+                    position: 'absolute',
+                    top: '0',
+                    width: '20%',
+                    right: '0',
+                  }}>
+                  <option value="US">United States</option>
+                  <option value="CA">Canada</option>
+                  <option value="MX">Mexico</option>
+                </select>
+              )}
             />
 
             <Input
