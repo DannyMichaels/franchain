@@ -10,6 +10,9 @@
   --color-background: #f8f8fb;
   --color-text: #282828;
   --color-error: #ff4e4e;
+  --color-border--primary: #b1b7d6;
+  --border-radius--primary: 8px;
+
   font-family: 'DM Sans', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;

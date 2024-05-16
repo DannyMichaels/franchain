@@ -1,3 +1,8 @@
+.AuthLayout__header-spacer {
+  height: 120px;
+  /* border: 5px solid green; */
+}
+
 .AuthLayout__container {
   display: flex;
   flex-direction: row;
@@ -9,6 +14,21 @@
   flex-direction: row;
   flex-grow: 1;
   height: 100%;
+  position: relative;
+}
+
+.AuthLayout__header {
+  width: 100%;
+  height: 10px;
+  height: 110px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.AuthLayout__header__content {
+  padding: 20px;
+  /* border: 1px solid red; */
 }
 
 .AuthLayout__children {
@@ -19,7 +39,7 @@
   display: flex;
   flex-direction: column;
   /* flex: 0.5; */
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   background: linear-gradient(
     146.36deg,
     #dfeaf0 8.13%,
@@ -29,7 +49,6 @@
   justify-content: center;
   align-items: center;
   flex-basis: 50%;
-  position: relative;
 }
 
 .AuthLayout__left__logo {
@@ -37,6 +56,7 @@
   top: 20px;
   left: 20px;
 }
+
 .AuthLayout__left__title {
   max-width: 550px;
   font-size: 40px;
@@ -58,6 +78,6 @@
 }
 
 .AuthLayout__right {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   flex-basis: 50%;
 }

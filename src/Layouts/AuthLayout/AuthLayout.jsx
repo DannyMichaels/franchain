@@ -17,9 +17,13 @@ export const AuthLayout = ({
   <div className="AuthLayout__container">
     <div className="inner-column">
       <div className="AuthLayout__content">
+        <div className="AuthLayout__header">
+          <div className="AuthLayout__header__content">
+            <img src={Logo} alt="Logo" className="AuthLayout__header__logo" />
+          </div>
+        </div>
         <div className="AuthLayout__left">
-          <img src={Logo} alt="Logo" className="AuthLayout__left__logo" />
-
+          <div className="AuthLayout__header-spacer"></div>
           <img
             src={image}
             alt="Auth image"
@@ -28,7 +32,11 @@ export const AuthLayout = ({
           <h1 className="AuthLayout__left__title">{title}</h1>
           <h2 className="AuthLayout__left__subtitle">{subtitle}</h2>
         </div>
-        <div className="AuthLayout__children AuthLayout__right">{children}</div>
+        <div className="AuthLayout__right">
+          <div className="AuthLayout__header-spacer"></div>
+
+          <div className="AuthLayout__children">{children}</div>
+        </div>
       </div>
     </div>
   </div>

@@ -1,0 +1,22 @@
+.SignupView__container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 50px;
+  margin-left: 50px;
+}
+
+.SignupView__title {
+  font-size: 35px;
+}
+
+.SignupView__subtitle {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.SignupView__form {
+  width: 100%;
+}
