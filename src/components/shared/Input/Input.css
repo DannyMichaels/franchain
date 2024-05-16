@@ -39,3 +39,13 @@
 .Input__error--visible {
   opacity: 1;
 }
+
+@media screen and (max-width: 1000px) {
+  .Input__container {
+    height: calc(56px + 20%);
+  }
+
+  .Input__field {
+    height: 67.2px;
+  }
+}
