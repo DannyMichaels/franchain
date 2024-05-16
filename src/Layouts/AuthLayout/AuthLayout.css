@@ -36,17 +36,27 @@
   flex-grow: 1;
 }
 
-.AuthLayout__left {
-  display: flex;
-  flex-direction: column;
-  /* flex: 0.5; */
-  /* border: 1px solid blue; */
+.gradient-background {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: calc(50%); /* half of page */
   background: linear-gradient(
     146.36deg,
     #dfeaf0 8.13%,
     #d5e4ea 58.07%,
     #f4e7f4 99.76%
   );
+}
+
+.AuthLayout__left {
+  display: flex;
+  flex-direction: column;
+  /* flex: 0.5; */
+  /* border: 1px solid blue; */
+  background: transparent;
   justify-content: flex-start;
   align-items: center;
   flex-basis: 50%;

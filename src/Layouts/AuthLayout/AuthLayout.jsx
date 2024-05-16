@@ -19,6 +19,7 @@ export const AuthLayout = ({
   subtitle = 'Revenue based invoice collection to make royalty collection as easy as...',
 }) => (
   <MotionViewport>
+    <div className="gradient-background"></div>
     <div className="AuthLayout__container">
       <div className="inner-column">
         <div className="AuthLayout__content">
