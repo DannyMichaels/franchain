@@ -14,9 +14,28 @@
   width: 100%;
   margin-top: 8px;
   padding: 10px;
+  transition: border-color 0.2s ease;
+}
+
+.Input__field:focus {
+  outline: none;
+  border-color: var(--color-text);
 }
 
 .Input__error {
   color: var(--color-error);
   font-size: 16px;
+  margin-top: 8px;
+  height: 20px;
+  opacity: 1;
+  width: 100%;
+  transition: opacity 250ms ease-in-out;
+}
+
+.Input__error--hidden {
+  opacity: 0;
+}
+
+.Input__error--visible {
+  opacity: 1;
 }

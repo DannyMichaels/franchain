@@ -15,7 +15,12 @@ export const Input = ({
       </label>
       <Field type={type} name={name} className="Input__field" {...rest} />
 
-      {error ? <div className="Input__error">{error}</div> : null}
+      <div
+        className={`Input__error ${
+          error ? ' Input__error--visible' : 'Input__error--hidden'
+        }`}>
+        {error}
+      </div>
     </div>
   );
 };

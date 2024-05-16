@@ -1,0 +1,10 @@
+.SignupForm__container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.SignupForm__submit-spacer {
+  height: 20px;
+}
