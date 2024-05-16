@@ -95,6 +95,11 @@
 }
 
 @media screen and (max-width: 900px) {
+  .gradient-background {
+    /* width: 100%; */
+    display: none;
+  }
+
   .AuthLayout__container {
     flex-direction: column;
   }
