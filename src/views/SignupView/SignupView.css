@@ -27,4 +27,12 @@
     margin-left: 0;
     padding: 20px;
   }
+
+  .SignupView__title {
+    font-size: 22px;
+  }
+
+  .SignupView__subtitle {
+    font-size: 16px;
+  }
 }
