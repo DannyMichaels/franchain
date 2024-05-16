@@ -96,6 +96,16 @@ export const SignupForm = () => {
                 label={isSubmitting ? 'Submitting...' : 'Sign up'}
               />
             </div>
+
+            <div className="SignupForm__terms">
+              By clicking “Start Application“, I agree to Mercury’s&nbsp;
+              <a href="#">Terms of Use</a>, <a href="#">Privacy Policy</a> and
+              to receive electronic communication about my accounts and services
+              per&nbsp;
+              <a href="#">Mercury’s Electronic Communications Agreement</a>, and
+              acknowledge receipt of&nbsp;
+              <a href="#">Mercury’s USA PATRIOT Act disclosure</a>.
+            </div>
           </Form>
         );
       }}

@@ -1,5 +1,5 @@
 .AuthLayout__header-spacer {
-  height: 120px;
+  height: 90px;
   /* border: 5px solid green; */
 }
 
@@ -47,7 +47,7 @@
     #d5e4ea 58.07%,
     #f4e7f4 99.76%
   );
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-basis: 50%;
 }
@@ -75,6 +75,7 @@
 .AuthLayout__left__image {
   max-width: 428px;
   width: 100%;
+  margin-top: 150px;
   object-fit: contain;
 }
 
