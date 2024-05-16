@@ -1,6 +1,7 @@
 .Input__container {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .Input__label {

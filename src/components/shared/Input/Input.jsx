@@ -6,10 +6,16 @@ export const Input = ({
   label = 'Label',
   error,
   name,
+  SelectComponent = null,
   ...rest
 }) => {
+  const hasSelectComponent = !!SelectComponent;
+
   return (
-    <div className="Input__container">
+    <div
+      className={`Input__container ${
+        hasSelectComponent ? 'Input__container--with-select' : ''
+      }`}>
       <label htmlFor={name} className="Input__label">
         {label}
       </label>

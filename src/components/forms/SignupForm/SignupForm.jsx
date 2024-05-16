@@ -11,7 +11,10 @@ export const SignupForm = () => {
   const validationSchema = Yup.object().shape({
     firstName: Yup.string().required('First name is required'),
     lastName: Yup.string().required('Last name is required'),
-    businessNameAndLocation: Yup.string().required('Business name is required'),
+    businessName: Yup.string().required('Business name is required'),
+    businessLocation: Yup.string()
+      .required('Business location is required')
+      .default('US'),
     workEmail: Yup.string()
       .email('Invalid email')
       .required('Email is required'),
@@ -46,7 +49,8 @@ export const SignupForm = () => {
       initialValues={{
         firstName: '',
         lastName: '',
-        businessNameAndLocation: '',
+        businessName: '',
+        businessLocation: 'US',
         workEmail: '',
         password: '',
       }}
@@ -55,28 +59,27 @@ export const SignupForm = () => {
       {({ isSubmitting, errors }) => {
         return (
           <Form className="SignupForm__container">
-            <Input
-              label="First name"
-              name="firstName"
-              error={touchedFields.firstName && errors.firstName}
-              onBlur={() => handleFieldBlur('firstName')}
-            />
+            <div className="SignupForm__row">
+              <Input
+                label="First name"
+                name="firstName"
+                error={touchedFields.firstName && errors.firstName}
+                onBlur={() => handleFieldBlur('firstName')}
+              />
 
-            <Input
-              label="Last name"
-              name="lastName"
-              error={touchedFields.lastName && errors.lastName}
-              onBlur={() => handleFieldBlur('lastName')}
-            />
+              <Input
+                label="Last name"
+                name="lastName"
+                error={touchedFields.lastName && errors.lastName}
+                onBlur={() => handleFieldBlur('lastName')}
+              />
+            </div>
 
             <Input
               label="Business name and HQ location"
-              name="businessNameAndLocation"
-              onBlur={() => handleFieldBlur('businessNameAndLocation')}
-              error={
-                touchedFields.businessNameAndLocation &&
-                errors.businessNameAndLocation
-              }
+              name="businessName"
+              onBlur={() => handleFieldBlur('businessName')}
+              error={touchedFields.businessName && errors.businessName}
             />
 
             <Input

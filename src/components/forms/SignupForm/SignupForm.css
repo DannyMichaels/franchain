@@ -5,6 +5,13 @@
   width: 100%;
 }
 
+.SignupForm__row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+}
+
 .SignupForm__submit {
   margin-top: 20px;
   width: 144px;
