@@ -56,15 +56,17 @@
 
 @media screen and (max-width: 420px) {
   .SignupView__title {
+    white-space: normal;
     font-size: clamp(7vw, 5vw, var(--header-font-size--mobile));
   }
 
   .SignupView__subtitle {
+    white-space: normal;
     font-size: clamp(5vw, 4vw, var(--sub-header-font-size--mobile));
   }
 
   .SignupView__container {
-    padding: 10px;
+    /* padding: 10px; */
   }
 }
 
