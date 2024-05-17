@@ -122,3 +122,9 @@
     width: 17.5px;
   }
 }
+
+@media screen and (max-width: 420px) {
+  .AuthLayout__header__content {
+    padding: 10px;
+  }
+}
