@@ -53,3 +53,9 @@
     font-weight: var(--sub-header-font-weight--mobile);
   }
 }
+
+@media screen and (max-width: 420px) {
+  .SignupView__container {
+    padding: 10px;
+  }
+}
