@@ -14,6 +14,16 @@
   --border-radius--primary: 8px;
   --font-size--small: 16px;
   --font-size--small-mobile: 12px;
+  --header-font-size: 35px;
+  --header-font-size--mobile: 30px;
+  --sub-header-font-size: 20px;
+  --sub-header-font-size--mobile: 20px;
+  --header-font-weight: 700;
+  --sub-header-font-weight: 300;
+  --header-font-weight--mobile: 700;
+  --sub-header-font-weight--mobile: 400;
+  --font-weight--regular: 400;
+  --font-weight--bold: 700;
 
   font-family: 'DM Sans', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

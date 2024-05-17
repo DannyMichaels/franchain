@@ -10,13 +10,16 @@
 }
 
 .SignupView__title {
-  font-size: 35px;
+  /* font-size: 35px; */
+  font-size: var(--header-font-size);
+  font-weight: var(--header-font-weight);
   white-space: nowrap;
 }
 
 .SignupView__subtitle {
-  font-size: 20px;
-  font-weight: 300;
+  /* font-size: 20px; */
+  font-size: var(--sub-header-font-size);
+  font-weight: var(--sub-header-font-weight);
 }
 
 .SignupView__form {
@@ -39,10 +42,14 @@
   }
 
   .SignupView__title {
-    font-size: 22px;
+    /* font-size: 22px; */
+    font-size: var(--header-font-size--mobile);
+    font-weight: var(--header-font-weight--mobile);
   }
 
   .SignupView__subtitle {
-    font-size: 16px;
+    /* font-size: 16px; */
+    font-size: var(--sub-header-font-size--mobile);
+    font-weight: var(--sub-header-font-weight--mobile);
   }
 }

@@ -107,6 +107,7 @@ export const SignupForm = () => {
             <Input
               label="Work email"
               name="workEmail"
+              autoComplete="email"
               error={touchedFields.workEmail && errors.workEmail}
               onBlur={() => handleFieldBlur('workEmail')}
             />
@@ -114,6 +115,7 @@ export const SignupForm = () => {
             <Input
               label="Password"
               type="password"
+              autoComplete="new-password"
               name="password"
               error={touchedFields.password && errors.password}
               onFocus={() => handleFieldBlur('password')}

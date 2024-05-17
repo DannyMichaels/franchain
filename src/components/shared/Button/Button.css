@@ -1,19 +1,30 @@
+:root {
+  --Button-font-size: 18px;
+  --Button-font-size-mobile: 20px;
+  --Button-border-radius: 60px;
+  --Button-padding: 15px;
+  --Button-padding-mobile: 10px 40px;
+}
+
 .Button {
+  box-sizing: border-box;
   background: #4a7cff;
   border: none;
-  padding: 15px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-weight: 700;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0; /* Remove padding from the button itself */
+  border-radius: var(--Button-border-radius);
   color: #fff;
-  font-size: 18px;
-  width: 100%;
-  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
   transition: background 0.3s ease;
+  white-space: nowrap;
+  padding: var(--Button-padding);
+  font-size: var(--Button-font-size);
 }
 
 .Button:disabled {
@@ -29,8 +40,9 @@
   outline: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   .Button {
-    font-size: var(--font-size--small-mobile);
+    font-size: var(--Button-font-size-mobile);
+    padding: var(--Button-padding-mobile);
   }
 }

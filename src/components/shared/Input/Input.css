@@ -1,3 +1,8 @@
+:root {
+  --input-field-height: 56px;
+  --input-field-height--mobile: 48px;
+}
+
 .Input__wrapper {
   display: flex;
   flex-direction: column;
@@ -6,13 +11,14 @@
 
 .Input__label {
   font-size: var(--font-size--small);
+  font-weight: var(--font-weight--regular);
 }
 
 .Input__container {
   cursor: text;
   border: 1px solid var(--color-border--primary);
   border-radius: var(--border-radius--primary);
-  height: 56px;
+  height: var(--input-field-height);
   width: 100%;
   margin-top: 8px;
   transition: border-color 0.2s ease;
@@ -87,7 +93,7 @@
   -webkit-appearance: none !important;
   appearance: none !important;
   padding-right: 2rem !important;
-  font-size: 12px;
+  font-size: var(--font-size--small);
   border-radius: 0 var(--border-radius--primary) var(--border-radius--primary) 0;
 }
 
@@ -101,11 +107,12 @@
   background: #fdfdff;
   color: var(--color-text);
   font-size: var(--font-size--small);
+  font-weight: var(--font-weight--regular);
 }
 
 @media screen and (max-width: 768px) {
   .Input__container {
-    height: 33.86px;
+    height: var(--input-field-height--mobile);
   }
 
   .Input__label,
@@ -113,7 +120,7 @@
   .Input__select,
   .Input__field,
   .Input__select > option {
-    font-size: var(--font-size--small-mobile);
+    /* font-size: var(--font-size--small-mobile); */
   }
 
   .Input__field--with-select {

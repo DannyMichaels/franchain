@@ -13,6 +13,7 @@
 }
 
 .SignupForm__submit {
+  display: flex;
   margin-top: 20px;
   width: 144px;
   height: 56px;
