@@ -16,7 +16,6 @@
   justify-content: center;
   align-items: center;
   margin: 0;
-  padding: 0; /* Remove padding from the button itself */
   border-radius: var(--Button-border-radius);
   color: #fff;
   min-width: 100%;
