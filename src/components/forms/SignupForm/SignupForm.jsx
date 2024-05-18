@@ -43,7 +43,7 @@ export const SignupForm = () => {
   };
 
   const handleFieldBlur = (fieldName) => {
-    setTouchedFields({ ...touchedFields, [fieldName]: true });
+    setTouchedFields((prevState) => ({ ...prevState, [fieldName]: true }));
   };
 
   return (
