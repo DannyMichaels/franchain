@@ -2,9 +2,9 @@ import AppRouter from './routes/index.routes';
 
 const App = () => {
   return (
-    <main className="App">
+    <div className="App">
       <AppRouter />
-    </main>
+    </div>
   );
 };
 
