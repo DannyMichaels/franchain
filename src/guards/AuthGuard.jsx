@@ -7,10 +7,6 @@ export default function AuthGuard({ children }) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log(
-      'storage',
-      JSON.parse(localStorage.getItem('auth-storage')).state
-    );
     if (!isAuthed()) {
       navigate('/auth/signup');
     }
