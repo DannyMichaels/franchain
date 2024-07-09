@@ -9,14 +9,22 @@ export const useAuthStore = create(
 
         signup: async (user) => {
           const id = Math.random().toString(36).substring(7);
-          set({ ...user, id });
+          set({
+            user: {
+              id,
+              ...user,
+            },
+          });
         },
 
-        isAuthed: () => !!get().user?.id,
+        isAuthed: () => {
+          const got = get();
+          return !!got.user?.id;
+        },
       }),
       {
         name: 'auth-storage',
-        storage: createJSONStorage(() => sessionStorage),
+        storage: createJSONStorage(() => localStorage),
       }
     )
   )

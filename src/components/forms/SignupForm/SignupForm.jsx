@@ -5,10 +5,14 @@ import * as Yup from 'yup';
 import { Formik, Form } from 'formik';
 import { countries } from '@/data/countries';
 import ReactCountryFlag from 'react-country-flag';
+import { useAuthStore } from '../../../store/auth.store';
+import { useNavigate } from 'react-router-dom';
 
 export const SignupForm = () => {
+  const { signup } = useAuthStore();
   const [submitted, setSubmitted] = useState(false);
   const [touchedFields, setTouchedFields] = useState({});
+  const navigate = useNavigate();
 
   const validationSchema = Yup.object().shape({
     firstName: Yup.string().required('First name is required'),
@@ -25,7 +29,7 @@ export const SignupForm = () => {
       .required('Password is required'),
   });
 
-  const handleSubmit = (values, { setSubmitting }) => {
+  const handleSubmit = async (values, { setSubmitting }) => {
     setSubmitted(true);
     setTimeout(() => {
       alert(
@@ -40,6 +44,9 @@ export const SignupForm = () => {
       );
       setSubmitting(false);
     }, 400);
+
+    await signup(values);
+    navigate('/');
   };
 
   const handleFieldBlur = (fieldName) => {
